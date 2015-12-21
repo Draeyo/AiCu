@@ -6,12 +6,11 @@
 /*   By: rmicolon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/20 22:52:59 by rmicolon          #+#    #+#             */
-/*   Updated: 2015/12/21 20:07:19 by vlistrat         ###   ########.fr       */
+/*   Updated: 2015/12/21 20:42:01 by maboukra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "aicu.h"
-#include "libft.h"
 
 int		ft_win(int row)
 {

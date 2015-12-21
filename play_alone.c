@@ -6,7 +6,7 @@
 /*   By: rmicolon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 23:37:43 by rmicolon          #+#    #+#             */
-/*   Updated: 2015/12/21 20:14:08 by vlistrat         ###   ########.fr       */
+/*   Updated: 2015/12/21 20:51:19 by maboukra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ int		ft_count_lines(char *input)
 
 void	ft_reduce(int *board, int i, int *mode, int lines)
 {
-	ft_putstr("Computer plays first !\n");
+	ft_putendl("Computer plays first !");
+	ft_putendl("Press enter to start...");
 	ft_press_enter();
 	ft_comp_move(board, i, mode[i], lines);
 }

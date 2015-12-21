@@ -6,7 +6,7 @@
 /*   By: maboukra <maboukra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/21 15:00:44 by maboukra          #+#    #+#             */
-/*   Updated: 2015/12/21 19:38:45 by maboukra         ###   ########.fr       */
+/*   Updated: 2015/12/21 20:48:58 by maboukra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,15 @@ int		ft_max(int *board, int lines)
 void	ft_press_enter(void)
 {
 	size_t	i;
-	char	buf[BUFF_SIZE];
+	char	*buf;
 
 	i = 0;
+	if (!(buf = (char*)malloc(sizeof(char) * BUFF_SIZE + 1)))
+		return ;
 	while (!ft_strstr(buf, "\n"))
 		read(0, &buf[i++], 1);
 	buf[1] = '\0';
-	if (i > 1)
-	{
-		ft_putstr("Please press enter only.");
-		ft_press_enter();
-	}
+	free (buf);
 }
 
 int		ft_print_results(int result)
