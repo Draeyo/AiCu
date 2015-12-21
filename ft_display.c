@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utilities.c                                     :+:      :+:    :+:   */
+/*   ft_display.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maboukra <maboukra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/21 15:00:44 by maboukra          #+#    #+#             */
-/*   Updated: 2015/12/21 20:48:58 by maboukra         ###   ########.fr       */
+/*   Updated: 2015/12/21 21:29:43 by maboukra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_press_enter(void)
 	while (!ft_strstr(buf, "\n"))
 		read(0, &buf[i++], 1);
 	buf[1] = '\0';
-	free (buf);
+	free(buf);
 }
 
 int		ft_print_results(int result)

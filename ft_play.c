@@ -6,7 +6,7 @@
 /*   By: maboukra <maboukra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/21 15:18:18 by maboukra          #+#    #+#             */
-/*   Updated: 2015/12/21 20:49:00 by maboukra         ###   ########.fr       */
+/*   Updated: 2015/12/21 22:20:23 by maboukra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int		ft_player_move(int *board, int i, int lines)
 	if (i == 0 && board[i] == 0)
 		return (0);
 	ft_putstr2("\nYou have removed ", buf[0], " match(es).\n");
-	ft_display_board(board, lines);
+//	ft_display_board(board, lines);
 	ft_putstr("Computer's turn\n");
 	return (0);
 }
@@ -68,6 +68,7 @@ int		ft_play(int *board, int *mode, int lines, int first)
 		ft_putstr("You begin ! Press enter to play\n");
 		ft_press_enter();
 	}
+	ft_display_board(board, lines);
 	while (i >= 0)
 	{
 		while (board[i] > 0)
