@@ -6,15 +6,20 @@
 #    By: vlistrat <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/20 15:22:11 by vlistrat          #+#    #+#              #
-#    Updated: 2015/12/21 21:23:05 by maboukra         ###   ########.fr        #
+#    Updated: 2015/12/21 23:13:57 by rmicolon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = alum1
 
-SRC = `ls | grep "\.c"`
+SRC = ft_display.c \
+	  ft_play.c \
+	  ft_get.c \
+	  ft_solve.c \
+	  main.c \
+	  ft_bufextend.c \
 
-OBJ = `ls | grep "\.o"`
+OBJ = $(SRC:.c=.o)
 
 LIB = -lft
 
@@ -31,7 +36,6 @@ $(OBJ): $(LIB)
 $(LIB):
 	@(cd $(LIBDIR) && $(MAKE) && cp $(LIBDIR).a $(LIBDIR).h ../)
 
-
 clean: cleanlib
 	/bin/rm -f $(OBJ)
 
@@ -46,4 +50,4 @@ fcleanlib:
 
 re: fclean all
 
-.PHONY: clean fclean re all $(NAME) $(OBJ) $(LIB)
+.PHONY: clean fclean re all

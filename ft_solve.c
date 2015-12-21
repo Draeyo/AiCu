@@ -6,7 +6,7 @@
 /*   By: rmicolon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/20 22:52:59 by rmicolon          #+#    #+#             */
-/*   Updated: 2015/12/21 22:20:26 by maboukra         ###   ########.fr       */
+/*   Updated: 2015/12/21 22:58:34 by maboukra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ int		ft_comp_move(int *board, int i, int mode, int lines)
 		play = ft_win(board[i]);
 	else
 		play = ft_lose(board[i]);
-	ft_display_board(board, lines);
 	ft_putstr("\nComputer has removed ");
 	ft_putnbr(play);
 	ft_putstr(" match(es).\n");
 	board[i] -= play;
+	ft_display_board(board, lines);
 	return (0);
 }
 
